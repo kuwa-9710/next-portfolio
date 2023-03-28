@@ -4,8 +4,8 @@ import { useFrame } from "react-three-fiber";
 export const Sphere = () => {
   const ref = useRef();
   useFrame(() => {
-    // ref.current.rotation.x += 0.01;
-    // ref.current.rotation.y += 0.01;
+  ref.current.rotation.x += 0.01;
+  ref.current.rotation.y += 0.01;
   });
 
   return (
