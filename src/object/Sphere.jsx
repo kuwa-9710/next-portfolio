@@ -4,8 +4,8 @@ import { useFrame } from "react-three-fiber";
 export const Sphere = () => {
   const ref = useRef();
   useFrame(() => {
-  ref.current.rotation.x += 0.01;
-  ref.current.rotation.y += 0.01;
+    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
   });
 
   return (
@@ -17,8 +17,8 @@ export const Sphere = () => {
         rotation={[0, 0, 0]}
         ref={ref}
       >
-        <sphereGeometry args={[1, 64, 32]} />
-        <meshNormalMaterial color="hotpink" wireframe={true} />
+        <sphereGeometry args={[1, 32, 16]} />
+        <meshNormalMaterial color="skyblue" wireframe={true} />
       </mesh>
     </>
   );

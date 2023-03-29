@@ -1,3 +1,3 @@
 export function Main(props) {
-  return <main className="min-h-screen min-w-screen">{props.children}</main>;
+  return <main className="h-screen w-screen">{props.children}</main>;
 }
