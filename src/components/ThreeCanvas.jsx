@@ -1,4 +1,5 @@
 import { Box } from "@/object/Box";
+import { Satellite } from "@/object/Satellite";
 import { Sphere } from "@/object/Sphere";
 import React, { useRef, useEffect } from "react";
 import { Canvas } from "react-three-fiber";
@@ -19,7 +20,7 @@ export function ThreeCanvas(props) {
         onResize={e => e.gl.setPixelRatio(window.devicePixelRatio)}
       >
         <Sphere />
-        {/* three.js objects */}
+        <Satellite />        
       </Canvas>
     </>
   );

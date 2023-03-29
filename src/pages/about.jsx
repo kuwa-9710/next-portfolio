@@ -1,13 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import * as THREE from "three";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
-import { Canvas, ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
-import { Maintitle } from "@/components/Maintitle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +12,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio | Top</title>
+        <title>Portfolio | About</title>
       </Head>
       <Header />
 
       <Main>
-        <ThreeCanvas />
-        <Maintitle />
+        <h1 className="text-3xl text-white text-center">About Page</h1>
       </Main>
 
       <Footer />
