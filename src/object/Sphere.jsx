@@ -3,9 +3,9 @@ import { useFrame } from "react-three-fiber";
 
 export const Sphere = () => {
   const ref = useRef();
-  useFrame(() => {
-    ref.current.rotation.x += 0.01;
-    ref.current.rotation.y += 0.01;
+
+  useFrame(() => {    
+    ref.current.rotation.y += 0.005;
   });
 
   return (
@@ -13,11 +13,11 @@ export const Sphere = () => {
       <mesh
         visible
         userData={{ hello: "world" }}
-        position={[0, 0, 3]}
+        position={[0, 0, 0]}
         rotation={[0, 0, 0]}
         ref={ref}
       >
-        <sphereGeometry args={[1, 32, 16]} />
+        <sphereGeometry args={[1.5, 64, 32]} />
         <meshNormalMaterial color="skyblue" wireframe={true} />
       </mesh>
     </>
