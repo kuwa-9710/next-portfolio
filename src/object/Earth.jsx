@@ -25,7 +25,7 @@ export function Earth({ ...props }) {
           receiveShadow
           position={[0, 0, 0]}
           rotation={[Math.PI, -1.1, Math.PI]}
-          scale={1}
+          scale={0.8}
           ref={ref}
         />
       </group>
