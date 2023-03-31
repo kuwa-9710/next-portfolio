@@ -13,7 +13,7 @@ export function ThreeCanvas(props) {
         id="canvas"
         style={{
           width: 100 + "vw",
-          height: 100 + "%",
+          height: 100 + "vh",
         }}
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
