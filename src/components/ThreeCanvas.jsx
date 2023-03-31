@@ -2,6 +2,7 @@ import { Earth } from "@/object/Earth";
 import { Satellite } from "@/object/Satellite";
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
+import { Sphere } from "@/object/Sphere";
 
 export function ThreeCanvas(props) {
   return (
@@ -20,7 +21,7 @@ export function ThreeCanvas(props) {
         }}
       >
         {/* <Sphere /> */}
-        {/* <Satellite /> */}
+        <Satellite />
         <Earth />
         <directionalLight
           name="Directional Light"
