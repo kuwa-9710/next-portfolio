@@ -5,7 +5,7 @@ import styles from "@/styles/Home.module.css";
 import * as THREE from "three";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
-import { Canvas, ThreeCanvas } from "@/components/ThreeCanvas";
+import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
 
