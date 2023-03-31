@@ -1,5 +1,5 @@
 import useSpline from "@splinetool/r3f-spline";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 export function Earth({ ...props }) {
@@ -10,7 +10,7 @@ export function Earth({ ...props }) {
   const ref = useRef();
 
   useFrame(() => {
-    ref.current.rotation.y += 0.002;
+    ref.current.rotation.y += 0.0005;
   });
 
   return (
