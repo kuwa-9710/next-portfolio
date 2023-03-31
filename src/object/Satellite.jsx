@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 export const Satellite = () => {
   const satelliteRef = useRef();
 
-  let radius = 3;
+  let radius = 200;
   let radian = 0;
 
   useFrame(() => {
@@ -12,6 +12,7 @@ export const Satellite = () => {
     satelliteRef.current.position.y = radius * Math.cos(radian);
     satelliteRef.current.position.z = radius * Math.sin(radian);
     radian += 0.01;
+    // console.log(radius * Math.sin(radian))
   });
 
   return (
@@ -22,10 +23,9 @@ export const Satellite = () => {
         rotation={[0, 0, 0]}
         ref={satelliteRef}
       >
-        <sphereGeometry args={[0.1, 64, 32]} />
+        <sphereGeometry args={[10, 64, 32]} />
         <meshNormalMaterial wireframe={true} />
       </mesh>
-      ƒ
     </>
   );
 };
