@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import { useFrame } from "react-three-fiber";
+import { useFrame } from "@react-three/fiber";
 
 export const Satellite = () => {
   const satelliteRef = useRef();
 
-  let radius = 2;
+  let radius = 3;
   let radian = 0;
 
   useFrame(() => {
