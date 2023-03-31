@@ -17,6 +17,7 @@ export default function Home() {
     <>
       <Head>
         <title>Portfolio | Top</title>
+        <link rel="shortcut icon" href="site_icon.ico" type="image/x-icon" />
       </Head>
       <Header />
 
