@@ -1,8 +1,6 @@
 import { Earth } from "@/object/Earth";
 import { Satellite } from "@/object/Satellite";
-// import { Sphere } from "@/object/Sphere";
-import { OrthographicCamera } from "@react-three/drei";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 
 export function ThreeCanvas(props) {
@@ -16,20 +14,14 @@ export function ThreeCanvas(props) {
         }}
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
+        camera={{
+          position: [0, 0, 500],
+          aspect: 100 + "vh" / 100 + "vw",
+        }}
       >
         {/* <Sphere /> */}
-        <Satellite />
+        {/* <Satellite /> */}
         <Earth />
-        <OrthographicCamera
-          name="1"
-          makeDefault={true}
-          zoom={1.11}
-          far={100000}
-          near={-100000}
-          position={[-979.89, 127.89, 153.18]}
-          rotation={[-0.7, -1.37, -0.69]}
-          scale={1}
-        />
         <directionalLight
           name="Directional Light"
           castShadow
@@ -42,7 +34,7 @@ export function ThreeCanvas(props) {
           shadow-camera-right={1250}
           shadow-camera-top={1250}
           shadow-camera-bottom={-1250}
-          position={[-90, 50, 0]}
+          position={[-50, 40, 50]}
         />
       </Canvas>
     </>
