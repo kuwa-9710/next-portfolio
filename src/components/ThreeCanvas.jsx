@@ -1,7 +1,6 @@
-import { Box } from "@/object/Box";
 import { Earth } from "@/object/Earth";
 import { Satellite } from "@/object/Satellite";
-import { Sphere } from "@/object/Sphere";
+// import { Sphere } from "@/object/Sphere";
 import { OrthographicCamera } from "@react-three/drei";
 import React, { useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
