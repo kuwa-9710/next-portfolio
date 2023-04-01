@@ -24,7 +24,7 @@ export const Satellite = () => {
         ref={satelliteRef}
       >
         <sphereGeometry args={[10, 64, 32]} />
-        <meshNormalMaterial wireframe={true} />
+        <meshStandardMaterial wireframe={false} />
       </mesh>
     </>
   );
