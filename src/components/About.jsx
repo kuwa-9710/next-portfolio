@@ -10,7 +10,7 @@ export const About = () => {
     >
       <div
         className="py-16 bg-gray-200/30 backdrop-blur-lg
-    rounded-2xl border border-gray-200/30 shadow-lg flex justify-center flex-col items-center gap-8 w-full max-w-lg mx-auto px-4"
+    rounded-2xl border border-gray-200/30 shadow-lg flex justify-center flex-col items-center gap-8 w-full max-w-lg mx-4 px-4"
       >
         <h2 className="text-center text-white font-bold text-3xl">
           About me
@@ -31,7 +31,7 @@ export const About = () => {
         </p>
         <Link
           href="/"
-          className="py-2 px-16 bg-slate-800 text-white rounded-md"
+          className="py-2 px-16 bg-slate-800 text-white rounded-md active:bg-sky-500 hover:bg-sky-400 "
         >
           Contact
         </Link>
