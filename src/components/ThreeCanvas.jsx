@@ -15,10 +15,10 @@ export function ThreeCanvas(props) {
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
         camera={{
-          position: [-100, 0, 600],
+          position: [0, 0, 600],
           aspect: 100 + "svh" / 100 + "svw",
         }}
-      >        
+      >
         <Satellite />
         <Earth />
         <directionalLight
