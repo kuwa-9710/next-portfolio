@@ -31,7 +31,7 @@ export const About = () => {
         </p>
         <Link
           href="/"
-          className="py-2 px-16 bg-slate-800 text-white rounded-md active:bg-sky-500 hover:bg-sky-400 "
+          className="py-2 px-16 bg-slate-800 text-white rounded-lg active:bg-sky-500 hover:bg-sky-400 "
         >
           Contact
         </Link>
