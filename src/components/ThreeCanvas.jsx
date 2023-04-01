@@ -10,13 +10,13 @@ export function ThreeCanvas(props) {
         id="canvas"
         style={{
           width: 100 + "%",
-          height: 100 + "vh",
+          height: 100 + "%",
         }}
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
         camera={{
           position: [0, 0, 600],
-          aspect: 100 + "%" / 100 + "%",
+          aspect: 100 + "vh" / 100 + "vw",
         }}
       >
         <Satellite />
