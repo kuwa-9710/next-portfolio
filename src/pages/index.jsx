@@ -8,6 +8,7 @@ import { Header } from "@/components/Header/Header";
 import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
+import { About } from "@/components/About";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function Home() {
       <Main>
         <ThreeCanvas />
         <Maintitle />
+        <About />
       </Main>
 
       <Footer />
