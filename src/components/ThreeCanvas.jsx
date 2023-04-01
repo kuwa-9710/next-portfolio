@@ -2,7 +2,6 @@ import { Earth } from "@/object/Earth";
 import { Satellite } from "@/object/Satellite";
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Sphere } from "@/object/Sphere";
 
 export function ThreeCanvas(props) {
   return (
@@ -10,8 +9,8 @@ export function ThreeCanvas(props) {
       <Canvas
         id="canvas"
         style={{
-          width: 100 + "svw",
-          height: 100 + "svh",
+          width: 100 + "%",
+          height: 100 + "vh",
         }}
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
@@ -19,8 +18,7 @@ export function ThreeCanvas(props) {
           position: [0, 0, 600],
           aspect: 100 + "svh" / 100 + "svw",
         }}
-      >
-        {/* <Sphere /> */}
+      >        
         <Satellite />
         <Earth />
         <directionalLight
