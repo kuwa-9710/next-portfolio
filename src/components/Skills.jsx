@@ -1,7 +1,7 @@
 export const Skills = () => {
   return (
-    <div>
-      <h2>My Skills</h2>
+    <div className="w-full max-w-5 xl mx-auto">
+      <h2 className="text-4xl font-extrabold">My Skills</h2>
       <ul>
         <li>HTML</li>
         <li>CSS</li>
