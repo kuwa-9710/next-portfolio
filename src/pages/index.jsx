@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import * as THREE from "three";
@@ -10,6 +9,8 @@ import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
+import { News } from "@/components/News";
+import { Works } from "@/components/Works";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,8 @@ export default function Home() {
         <Maintitle />
         <About />
         <Skills />
+        <News />
+        <Works />
       </Main>
 
       <Footer />
