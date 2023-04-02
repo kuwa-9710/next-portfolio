@@ -1,14 +1,12 @@
 export const News = () => {
   return (
     <div>
-      <h2>My Skills</h2>
+      <h2>NEWS</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>javascript</li>
-        <li>PHP</li>
-        <li>WordPress</li>
-        <li>Sass</li>
+        <li className="flex flex-col">
+          <span>2023.04.01</span>
+          <span>Portfolioサイトを開設しました。</span>
+        </li>
       </ul>
     </div>
   );
