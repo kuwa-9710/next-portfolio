@@ -7,6 +7,7 @@ import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
 import { Mv } from "@/components/Mv";
+import { Skills } from "@/components/Skills";
 
 export default function Home() {
   console.log(THREE);
@@ -23,6 +24,7 @@ export default function Home() {
           <ThreeCanvas />
           <Maintitle />
         </Mv>
+        <Skills />
       </Main>
 
       <Footer />
