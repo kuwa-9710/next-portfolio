@@ -1,15 +1,15 @@
-export const Skills = () => {
+import { SectionText } from "./SectionText";
+import { Skillcards } from "./Skillcards";
+import { Subtitle } from "./Subtitle";
+import { Title } from "./Title";
+
+export const Skills = (props) => {
   return (
-    <div className="w-full max-w-5 xl mx-auto">
-      <h2 className="text-4xl font-extrabold">My Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>javascript</li>
-        <li>PHP</li>
-        <li>WordPress</li>
-        <li>Sass</li>
-      </ul>
+    <div className="w-full mx-auto max-w-5xl px-4">
+      <Subtitle title="My skills" />
+      <Title title="最新のテクノロジーを駆使して、スマートなウェブサイトを実現します。" />
+      <SectionText title="私は、常に最新のテクノロジーを取り入れることで、高品質かつスマートなウェブサイトを実現しています。フロントエンド開発においては、ReactやVue.js、Three.jsなどの人気のフレームワークを使用し、高速でレスポンシブなウェブサイトを構築することができます。" />
+      <Skillcards />
     </div>
   );
 };
