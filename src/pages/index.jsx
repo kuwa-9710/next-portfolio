@@ -6,7 +6,7 @@ import { Header } from "@/components/Header/Header";
 import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
-import { Mv } from "@/components/mv";
+import { Mv } from "@/components/Mv";
 
 export default function Home() {
   console.log(THREE);
