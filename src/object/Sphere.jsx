@@ -13,7 +13,7 @@ export const Sphere = () => {
       <mesh
         visible
         userData={{ hello: "world" }}
-        position={[0, 0, 0]}
+        position={[0, 0, 595]}
         rotation={[0, 0, 0]}
         ref={ref}
       >

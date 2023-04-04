@@ -5,18 +5,20 @@ import { Canvas } from "@react-three/fiber";
 
 export function ThreeCanvas(props) {
   return (
+    // three canvas
     <>
       <Canvas
         id="canvas"
         style={{
           width: 100 + "%",
           height: 100 + "svh",
+          minHeight: 100 + "vh",
         }}
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
         camera={{
           position: [0, 0, 600],
-          aspect: 100 + "vh" / 100 + "vw",
+          aspect: 100 + "%" / 100 + "%",
         }}
       >
         <Satellite />
