@@ -3,8 +3,8 @@ import styles from "@/components/Header/Header.module.css";
 
 export function Header() {
   return (
-    <header className="absolute z-50 w-full flex justify-start md:justify-between items-center h-16 px-8">
-      <span className="block text-3xl text-white font-mono">AboutMe</span>
+    <header className="absolute z-50 w-full flex justify-start md:justify-between items-center h-16 px-4 md:px-8">
+      <span className="block text-3xl text-white">AboutMe</span>
       <nav className="gap-6 items-center hidden md:flex">
         <Link
           className="text-white active:text-sky-400 hover:text-sky-400 text-sm"
