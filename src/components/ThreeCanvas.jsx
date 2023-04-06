@@ -11,7 +11,7 @@ export function ThreeCanvas(props) {
         id="canvas"
         style={{
           width: 100 + "%",
-          height: 100 + "svh",
+          height: 100 + "vh",
           minHeight: 100 + "vh",
         }}
         {...props}
