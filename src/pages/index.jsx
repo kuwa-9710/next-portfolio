@@ -8,9 +8,9 @@ import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
 import { Mv } from "@/components/Mv";
 import { Skills } from "@/components/Skills";
+import { Works } from "@/components/Works";
 
-export default function Home() {
-  console.log(THREE);
+export default function Home() {  
   return (
     <>
       <Head>
@@ -25,6 +25,7 @@ export default function Home() {
           <Maintitle />
         </Mv>
         <Skills />
+        <Works />
       </Main>
 
       <Footer />

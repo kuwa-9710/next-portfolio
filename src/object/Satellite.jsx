@@ -11,8 +11,7 @@ export const Satellite = () => {
     satelliteRef.current.position.x = radius * Math.cos(radian);
     satelliteRef.current.position.y = radius * Math.cos(radian);
     satelliteRef.current.position.z = radius * Math.sin(radian);
-    radian += 0.01;
-    // console.log(radius * Math.sin(radian))
+    radian += 0.01;    
   });
 
   return (

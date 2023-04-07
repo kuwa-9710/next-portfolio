@@ -8,7 +8,6 @@ import { Main } from "@/components/Main";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  console.log(THREE);
   return (
     <>
       <Head>
