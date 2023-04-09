@@ -6,6 +6,7 @@ import { Card } from "./Card";
 export const Skillcards = (props) => {
   const items = [
     {
+      id: 1,
       icon: (
         <FontAwesomeIcon icon={faCode} className="h-6 text-pink-500" />
       ),
@@ -16,6 +17,7 @@ export const Skillcards = (props) => {
         "HTML,CSS(Sass),javascriptを使用してレスポンシブなWebサイトを構築できます。また、ReactやNext.jsを使用してインタラクティブなサイトも作成可能です。",
     },
     {
+      id: 2,
       icon: (
         <FontAwesomeIcon icon={faFigma} className="h-6 text-green-500" />
       ),
@@ -26,6 +28,7 @@ export const Skillcards = (props) => {
         "魅力的なUI/UXデザインを実現し、ユーザーエクスペリエンスを最適化します。Figmaを使い、あなたのウェブサイトを美しく仕上げます。",
     },
     {
+      id: 3,
       icon: (
         <FontAwesomeIcon icon={faWordpress} className="h-6 text-sky-500" />
       ),
@@ -38,11 +41,11 @@ export const Skillcards = (props) => {
   ];
 
   return (
-    <div className="w-full mx-auto max-w-5xl flex flex-col md:justify-between md:flex-row md:gap-8 mt-8">
+    <div className="w-full mx-auto max-w-5xl flex flex-col md:justify-between md:flex-row gap-8 mt-24">
       {items.map((item) => {
         return (
           <Card
-            key={item}
+            key={item.id}
             icon={item.icon}
             title={item.title}
             titleClass={item.titleClass}
