@@ -9,7 +9,6 @@ import { Mv } from "@/components/Mv";
 import { Skills } from "@/components/Skills";
 import { Works } from "@/components/Works";
 import { createClient } from "microcms-js-sdk";
-import Link from "next/link";
 
 export default function Home({ works }) {
   return (
