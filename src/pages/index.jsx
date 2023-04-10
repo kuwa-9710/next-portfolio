@@ -26,9 +26,8 @@ export default function Home({ works }) {
         </Mv>
         <Skills />
         <Works works={works} />
+        <Footer />
       </Main>
-
-      <Footer />
     </>
   );
 }
