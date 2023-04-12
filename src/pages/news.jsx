@@ -1,23 +1,19 @@
-import Head from "next/head";
 import { Inter } from "next/font/google";
-import * as THREE from "three";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
 import { Main } from "@/components/Main";
+import { HeaderTag } from "@/components/HeadTag";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() { 
   return (
     <>
-      <Head>
-        <title>Portfolio | News</title>
-        <link rel="shortcut icon" href="site_icon.ico" type="image/x-icon" />
-      </Head>
+      <HeaderTag page="Top" />      
       <Header />
 
       <Main>
-        <h1 className="text-3xl text-white text-center">News Page</h1>
+        <h1 className="mt-4 text-3xl text-white text-center">News Page</h1>
       </Main>
 
       <Footer />

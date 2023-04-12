@@ -9,14 +9,12 @@ import { Mv } from "@/components/Mv";
 import { Skills } from "@/components/Skills";
 import { Works } from "@/components/Works";
 import { createClient } from "microcms-js-sdk";
+import { HeaderTag } from "@/components/HeadTag";
 
 export default function Home({ works }) {
   return (
     <>
-      <Head>
-        <title>Portfolio | Top</title>
-        <link rel="shortcut icon" href="site_icon.ico" type="image/x-icon" />
-      </Head>
+      <HeaderTag page="Top" />
       <Header />
 
       <Main>
@@ -26,8 +24,9 @@ export default function Home({ works }) {
         </Mv>
         <Skills />
         <Works works={works} />
-        <Footer />
       </Main>
+      
+      <Footer />
     </>
   );
 }
@@ -39,7 +38,7 @@ export async function getStaticProps() {
   });
 
   const data = await client.get({
-    endpoint: "blogs",
+    endpoint: "works",
   });
 
   return {
