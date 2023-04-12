@@ -1,22 +1,30 @@
-import Link from "next/link";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header/Header";
+import { HeaderTag } from "@/components/HeadTag";
+import { Main } from "@/components/Main";
+import { WorksContent } from "@/components/WorksContent";
 import { client } from "../../libs/client";
 
 export default function Work({ work }) {
   return (
-    <div>
-      <ul>
-        {work.map((work) => (
-          <li key={work.id}>
-            <Link href={`/work/${work.id}`}>{work.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <HeaderTag page="Top" />
+      <Header />
+
+      <Main>
+        <div className="pt-16 px-4">
+          <h1 className="pt-4 text-3xl text-white text-center">Work Page</h1>
+          <WorksContent works={work} />
+        </div>
+      </Main>
+
+      <Footer />
+    </>
   );
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blogs" });
+  const data = await client.get({ endpoint: "works" });
 
   return {
     props: {
