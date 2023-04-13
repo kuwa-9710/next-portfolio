@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function Main(props) {
   return (
     <main className="min-h-[730px] h-full w-full">      

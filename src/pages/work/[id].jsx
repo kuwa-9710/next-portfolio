@@ -4,6 +4,7 @@ import { HeaderTag } from "@/components/HeadTag";
 import { Main } from "@/components/Main";
 import Image from "next/image";
 import { client } from "../../../libs/client";
+import styles from "./WorkContent.module.css";
 
 export default function WorkId({ work }) {
   const microCMSLoader = ({ src, width, quality }) => {
@@ -15,24 +16,25 @@ export default function WorkId({ work }) {
       <HeaderTag page="Top" />
       <Header />
       <Main>
-        <div className="pt-16">
-          <div className="text-slate-700 bg-white min-h-screen">
-            <h1>{work.title}</h1>
-            <p>{work.publishedAt}</p>
+        <div className="py-20">
+          <article className="article text-slate-700 bg-white backdrop-blur-lg min-h-screen max-w-[800px] mx-auto p-8 rounded-2xl">
+            <h1 className="text-3xl font-extrabold">{work.title}</h1>
+            <p className="mt-5">{work.publishedAt}</p>
             <Image
               loader={microCMSLoader}
               alt=""
               src={work.eyecatch.url}
               width={work.eyecatch.width}
               height={work.eyecatch.height}
-              className="w-full h-56 object-cover"
+              className="mt-5 w-full object-cover"
             />
             <div
+              className={styles.article}
               dangerouslySetInnerHTML={{
                 __html: `${work.content}`,
               }}
             ></div>
-          </div>
+          </article>
         </div>
       </Main>
       <Footer />
