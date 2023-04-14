@@ -8,7 +8,7 @@ import { client } from "../../libs/client";
 export default function Work({ work }) {
   return (
     <>
-      <HeaderTag page="Top" />
+      <HeaderTag page=" 制作実績" />
       <Header />
 
       <Main>
