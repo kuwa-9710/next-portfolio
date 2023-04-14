@@ -10,6 +10,7 @@ import { Skills } from "@/components/Skills";
 import { Works } from "@/components/Works";
 import { createClient } from "microcms-js-sdk";
 import { HeaderTag } from "@/components/HeadTag";
+import { AboutMe } from "@/components/About";
 
 export default function Home({ works }) {
   return (
@@ -24,6 +25,7 @@ export default function Home({ works }) {
         </Mv>
         <Skills />
         <Works works={works} />
+        <AboutMe />
       </Main>
       
       <Footer />
