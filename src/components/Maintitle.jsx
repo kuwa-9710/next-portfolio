@@ -4,7 +4,7 @@ export const Maintitle = () => {
       <span className="text-slate-500 text-lg md:text-4xl">
         Hi! my name is ...
       </span>
-      <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-md mt-4">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-md mt-4">
         Tomoya Kuwashima
       </h1>
       <p className="text-lg md:text-4xl font-bold text-slate-500 drop-shadow-sm mt-4">
