@@ -1,12 +1,9 @@
-import { Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
-import { Main } from "@/components/Main";
 import { HeaderTag } from "@/components/HeadTag";
+import { Main } from "@/components/Main";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {  
+export default function Contact() {
   return (
     <>
       <HeaderTag page="Contact" />

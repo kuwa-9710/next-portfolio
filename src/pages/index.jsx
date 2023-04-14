@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
@@ -9,13 +8,14 @@ import { Mv } from "@/components/Mv";
 import { Skills } from "@/components/Skills";
 import { Works } from "@/components/Works";
 import { createClient } from "microcms-js-sdk";
-import { HeaderTag } from "@/components/HeadTag";
 import { AboutMe } from "@/components/About";
+import { HeaderTag } from "@/components/HeadTag";
 
 export default function Home({ works }) {
   return (
     <>
       <HeaderTag page="Top" />
+
       <Header />
 
       <Main>
@@ -27,7 +27,7 @@ export default function Home({ works }) {
         <Works works={works} />
         <AboutMe />
       </Main>
-      
+
       <Footer />
     </>
   );
