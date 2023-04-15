@@ -7,12 +7,13 @@ export const HeaderTag = (props) => {
       <meta
         name="description"
         content={"Tomoya Kuwashimaのポートフォリオの" + props.page + "pageです"}
-      />    
+      />
       <meta property="og:title" content={"Portfolio" + " | " + props.page} />
       <meta
         property="og:description"
         content={"Tomoya Kuwashimaのポートフォリオの" + props.page + "pageです"}
       />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:type" content="website" />
       <meta property="og:image:alt" content="Portfolio" />
       <meta name="twitter:card" content="summary_large_image" />
