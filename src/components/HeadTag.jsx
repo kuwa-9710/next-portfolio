@@ -16,7 +16,8 @@ export const HeaderTag = (props) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:type" content="website" />
       <meta property="og:image:alt" content="Portfolio" />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:image" content="%PUBLIC_URL%/site_eyecatch.jpg" />
+      <meta name="twitter:card" content="%PUBLIC_URL%/site_eyecatch.jpg" />
       <meta name="twitter:title" content={"Portfolio" + " | " + props.page} />
       <meta
         name="twitter:description"
