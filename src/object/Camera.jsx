@@ -1,23 +1,28 @@
-import { PerspectiveCamera } from "@react-three/drei";
-import { useEffect, useRef } from "react";
-import { useFrame } from "react-three-fiber";
+import { useThree, useFrame } from "@react-three/fiber";
+import { useRef } from "react";
 
-export const Camera = () => {
-  const cameraRef = useRef();
-  const scrollRef = useRef(0);
+export function Camera(props) {
+  const { camera } = useThree();
+  const width = useRef(window.innerWidth);
+
+  const updateCameraPosition = () => {
+    const newWidth = window.innerWidth;
+    if (newWidth !== width.current) {
+      width.current = newWidth;
+      if (newWidth < 768) {
+        camera.position.set(30, -50, 400);
+      } else if (newWidth < 1024) {
+        camera.position.set(0, 0, 500);
+      } else {
+        camera.position.set(30, -50, 400);
+      }
+      camera.updateProjectionMatrix();
+    }
+  };
 
   useFrame(() => {
-    cameraRef.current.position.z = scrollRef.current * 0.01;
+    updateCameraPosition();
   });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      scrollRef.current = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return <PerspectiveCamera ref={cameraRef}/>; 
-};
+  return null;
+}

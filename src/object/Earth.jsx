@@ -22,7 +22,7 @@ export function Earth({ ...props }) {
         material={materials["Sphere Material"]}
         castShadow
         receiveShadow
-        position={[0, -50, 0]}
+        position={[150, 0, 0]}
         rotation={[Math.PI, -1.1, Math.PI]}
         scale={0.8}
         ref={ref}
