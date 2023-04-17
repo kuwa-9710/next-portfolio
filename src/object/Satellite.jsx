@@ -8,7 +8,7 @@ export const Satellite = () => {
   let radian = 0;
 
   useFrame(() => {
-    satelliteRef.current.position.x = radius * Math.cos(radian);
+    satelliteRef.current.position.x = (radius * Math.cos(radian) + 100);
     satelliteRef.current.position.y = radius * Math.cos(radian);
     satelliteRef.current.position.z = radius * Math.sin(radian);
     radian += 0.01;    

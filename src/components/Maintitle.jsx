@@ -1,3 +1,5 @@
+import { Parallax } from "react-scroll-parallax";
+
 export const Maintitle = () => {
   return (
     <div className="w-full max-w-5xl px-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">

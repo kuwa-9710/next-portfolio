@@ -2,24 +2,24 @@ import { Earth } from "@/object/Earth";
 import { Satellite } from "@/object/Satellite";
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
+import { Camera } from "@/object/Camera";
 
 export function ThreeCanvas(props) {
   return (
-    // three canvas
     <>
       <Canvas
         id="canvas"
         style={{
           width: 100 + "%",
-          height: 100 + "vh",          
+          height: 100 + "vh",
         }}
         {...props}
         onResize={(e) => e.gl.setPixelRatio(window.devicePixelRatio)}
         camera={{
-          position: [0, 0, 600],
-          aspect: 100 + "%" / 100 + "%",
+          position: [30, -50, 400],
         }}
       >
+        <Camera />
         <Satellite />
         <Earth />
         <directionalLight
