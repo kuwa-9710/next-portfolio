@@ -35,7 +35,7 @@ export const Skillcards = (props) => {
   ];
 
   return (
-    <div className="w-full mx-auto max-w-5xl md:max-w-none flex flex-col lg:justify-between lg:flex-row gap-8 lg:gap-0 mt-8 lg:mt-16">
+    <div className="w-full mx-auto max-w-3xl md:max-w-none flex flex-col lg:justify-between lg:flex-row gap-8 lg:gap-0 mt-8 lg:mt-16">
       {items.map((item) => {
         return (
           <Card
