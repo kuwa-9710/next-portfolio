@@ -5,7 +5,7 @@ import { Subtitle } from "./Subtitle";
 
 export const AboutMe = (props) => {
   return (
-    <div className="w-full mx-auto max-w-5xl px-4 mt-28 flex flex-col justify-center items-center text-center">
+    <div className="w-full mx-auto max-w-3xl px-4 mt-28 flex flex-col justify-center items-center text-center">
       <Subtitle title="About me" />
       <Image
         src="/my_icon.jpg"

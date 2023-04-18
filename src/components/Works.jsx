@@ -6,7 +6,7 @@ import { WorksContent } from "./WorksContent";
 export const Works = ({ works }) => {
   return (
     <div className="bg-slate-900">
-      <div className=" w-full mx-auto max-w-5xl px-4 py-28 md:py-48">
+      <div className=" w-full mx-auto max-w-3xl px-4 py-28 md:py-48">
         <Subtitle title="My Works" />
         <Title title="美しく、使いやすく、効果的になるよう心掛けています" />
         <WorksContent works={works} />
