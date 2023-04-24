@@ -2,7 +2,7 @@ import { Parallax } from "react-scroll-parallax";
 
 export const Maintitle = () => {
   return (
-    <div className="w-full max-w-3xl px-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+    <div className="w-full max-w-3xl px-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:max-w-4xl lg:max-w-6xl">
       <span className="text-slate-500 text-lg md:text-4xl">
         Hi! my name is ...
       </span>

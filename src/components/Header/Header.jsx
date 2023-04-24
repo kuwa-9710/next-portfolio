@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full max-w-screen-2xl flex flex-wrap items-center justify-between px-4 py-4 mx-auto bg-transparent">
       <div className="flex items-center">
-        <Link href="/" className="text-lg font-bold text-white">
+        <Link href="/" className="text-2xl font-bold text-white">
           AboutMe
         </Link>
       </div>

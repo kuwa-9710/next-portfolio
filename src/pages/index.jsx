@@ -5,7 +5,7 @@ import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
 import { Mv } from "@/components/Mv";
 import { Skills } from "@/components/Skills";
-import { Works } from "@/components/Works";
+import { Works } from "@/components/Works/Works";
 import { createClient } from "microcms-js-sdk";
 import { AboutMe } from "@/components/About";
 import { HeaderTag } from "@/components/HeadTag";
@@ -13,7 +13,7 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 export default function Home({ works }) {
   return (
-    <>
+    <div className="scrollbar scrollbar-thumb-sky-400 scrollbar-track-gray-100">
       <HeaderTag page="Top" />
 
       <Header />
@@ -33,7 +33,7 @@ export default function Home({ works }) {
       </Main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 
