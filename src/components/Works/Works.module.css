@@ -1,0 +1,11 @@
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
