@@ -56,7 +56,7 @@ export const Works = ({ works }) => {
           id="content_1"
           className="mb-[300px] panel h-screen pt-8 text-center gap-8 lg:flex"
         >
-          <div className="fixed-container top-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
+          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
             <h3 className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
               Visions Lunettes
             </h3>
@@ -66,7 +66,7 @@ export const Works = ({ works }) => {
           </div>
           <div className="image-container relative h-full w-full lg:w-1/2">
             <Image
-              className="image-content absolute top-16 left-6 w-40 object-top z-30 object-cover lg:w-40 lg:top-1/4"
+              className="image-content absolute top-16 left-6 w-40 object-top z-30 object-cover lg:w-40 lg:top-40"
               alt=""
               src="/visions_top.png"
               width={300}
@@ -94,7 +94,7 @@ export const Works = ({ works }) => {
           id="content_2"
           className="panel h-screen mb-[300px] pt-8 text-center gap-8 lg:flex"
         >
-          <div className="fixed-container top-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
+          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
             <h3 className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
               Visions Lunettes
             </h3>
@@ -104,7 +104,7 @@ export const Works = ({ works }) => {
           </div>
           <div className="image-container relative h-full w-full lg:w-1/2">
             <Image
-              className="absolute top-16 left-6 w-40 object-top z-30 object-cover lg:w-40 lg:top-1/4"
+              className="absolute top-16 left-6 w-40 object-top z-30 object-cover lg:w-40 lg:top-40"
               alt=""
               src="/visions_top.png"
               width={300}
@@ -132,7 +132,7 @@ export const Works = ({ works }) => {
           id="content_2"
           className="panel h-screen pt-8 text-center gap-8 lg:flex"
         >
-          <div className="fixed-container top-16 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
+          <div className="mt-16 lg:mt-0 lg:w-1/2 lg:flex lg:flex-col lg:justify-center">
             <h3 className="text-3xl font-bold text-slate-900 md:text-4xl lg:text-5xl">
               Visions Lunettes
             </h3>
@@ -142,7 +142,7 @@ export const Works = ({ works }) => {
           </div>
           <div className="image-container relative h-full w-full lg:w-1/2">
             <Image
-              className="absolute top-16 left-6 w-40 object-top z-30 object-cover lg:w-40 lg:top-1/4"
+              className="absolute top-16 left-6 w-40 object-top z-30 object-cover lg:w-40 lg:top-40"
               alt=""
               src="/visions_top.png"
               width={300}
