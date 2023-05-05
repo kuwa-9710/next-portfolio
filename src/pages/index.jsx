@@ -3,13 +3,12 @@ import { Header } from "@/components/Header/Header";
 import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
 import { Maintitle } from "@/components/Maintitle";
-import { Mv } from "@/components/Mv";
-import { Skills } from "@/components/Skills";
+import { Skills } from "@/components/Skills/Skills";
 import { Works } from "@/components/Works/Works";
 import { createClient } from "microcms-js-sdk";
 import { AboutMe } from "@/components/About";
 import { HeaderTag } from "@/components/HeadTag";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { Mv } from "@/components/Mv/Mv";
 
 export default function Home({ works }) {
   return (
@@ -19,14 +18,7 @@ export default function Home({ works }) {
       <Header />
 
       <Main>
-        <Mv>
-          <ParallaxProvider>
-            <Parallax speed={-30}>
-              <ThreeCanvas />
-              <Maintitle />
-            </Parallax>
-          </ParallaxProvider>
-        </Mv>
+        <Mv />
         <Skills />
         <Works works={works} />
         <AboutMe />

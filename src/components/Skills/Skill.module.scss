@@ -1,0 +1,221 @@
+.container {
+  background-color: #020617;
+}
+
+.contents {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  gap: 4rem;
+}
+
+.card {
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 400px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+
+  /* =================================================
+   背景ボックス
+  =================================================== */
+  &::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5rem;
+    transform: skewX(15deg);
+    transition: 0.7s;
+  }
+
+  /* =================================================
+   背景ボックスのblurフィルター
+  =================================================== */
+  &::after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5rem;
+    transform: skewX(15deg);
+    filter: blur(30px);
+    transition: 0.7s;
+  }
+
+  /* =================================================
+   activeクラスが付与された時
+  =================================================== */
+  &.active {
+    &::before {
+      transform: skewX(0deg) translateX(-50%);
+      left: 50%;
+      width: 50%;
+    }
+
+    &::after {
+      transform: skewX(0deg) translateX(-50%);
+      left: 50%;
+      width: 50%;
+    }
+  }
+
+  &:nth-child(1) {
+    &::before {
+      background: linear-gradient(315deg, #ffbc00, #ff518e);
+    }
+    &::after {
+      background: linear-gradient(315deg, #ffbc00, #ff518e);
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      background: linear-gradient(315deg, #03a9f4, #ff0058);
+    }
+    &::after {
+      background: linear-gradient(315deg, #03a9f4, #ff0058);
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      background: linear-gradient(315deg, #4dff03, #00d0ff);
+    }
+    &::after {
+      background: linear-gradient(315deg, #4dff03, #00d0ff);
+    }
+  }
+}
+
+/* =================================================
+ span要素
+=================================================== */
+.box {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation-delay: -1s;
+  }
+
+  &.active {
+    &::before {
+      top: -25px;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+    }
+    &::after {
+      bottom: -25px;
+      right: 50px;
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.card_content {
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+
+  &.active {
+    padding: 60px 40px;
+  }
+}
+
+.card_title {
+  font-weight: bold;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+.card_text {
+  margin-top: 1rem;
+  line-height: 1.5em;  
+}
+
+/* =================================================
+ px
+=================================================== */
+@media screen and (max-width: 1040px) {
+  .contents {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    height: 450px;
+  }
+}

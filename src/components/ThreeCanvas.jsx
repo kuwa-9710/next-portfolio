@@ -44,8 +44,7 @@ export function ThreeCanvas(props) {
 function Scene() {
   const { viewport } = useThree();
   const cameraRef = useRef();
-
-  // ビューポートがリサイズされたときに呼ばれる関数
+  
   const handleResize = () => {
     const aspect = viewport.width / viewport.height;
     cameraRef.current.aspect = aspect;
