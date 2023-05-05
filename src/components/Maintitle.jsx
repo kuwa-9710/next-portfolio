@@ -1,5 +1,3 @@
-import { Parallax } from "react-scroll-parallax";
-
 export const Maintitle = () => {
   return (
     <div className="w-full max-w-3xl px-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:max-w-4xl lg:max-w-6xl">
@@ -14,7 +12,7 @@ export const Maintitle = () => {
       </p>
       <a
         href="https://github.com/kuwa-9710"
-        className="mt-6 flex items-center w-full max-w-xs justify-center gap-4 py-4 px-12 
+        className="relative z-30 mt-6 flex items-center w-full max-w-xs justify-center gap-4 py-4 px-12 
           bg-slate-800 text-white rounded-lg active:bg-sky-500 hover:bg-sky-400
           transition-all before:content-[url('/github.svg')] before:w-[30px] before:h-[30px]"
         target="_blank"
