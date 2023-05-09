@@ -6,7 +6,7 @@ import { Maintitle } from "@/components/Maintitle";
 import { Skills } from "@/components/Skills/Skills";
 import { Works } from "@/components/Works/Works";
 import { createClient } from "microcms-js-sdk";
-import { AboutMe } from "@/components/About";
+import { AboutMe } from "@/components/About/About";
 import { HeaderTag } from "@/components/HeadTag";
 import { Mv } from "@/components/Mv/Mv";
 

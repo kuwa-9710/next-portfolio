@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #020617;
+  align-items: center;
+  margin: 0 auto;  
+  padding: 1rem;
+  text-align: center;
+  min-height: 80vh;
+}
+
+.image {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.name {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.location {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* =================================================
+ px
+=================================================== */
+@media screen and (max-width: 600px) {
+  .image {
+    height: 200px;
+    width: 200px;
+  }
+}
