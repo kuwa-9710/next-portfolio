@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { Subtitle } from "../Subtitle";
+import { Subtitle } from "../Subtitle/Subtitle";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import style from "./Skill.module.scss";
@@ -66,6 +66,7 @@ export const Skills = (props) => {
 
   return (
     <div className={style.container}>      
+      <Subtitle title="My Skills"></Subtitle>
       <div className={style.contents}>
         <div className={card_1_class} ref={cardRefs[0]}>
           <span className={spanClass_1}></span>
