@@ -5,12 +5,15 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import { Subtitle } from "../Subtitle/Subtitle";
 
 export const Works = ({ works }) => {
   const fixedElement = useRef(null);
   const fixedElement_2 = useRef(null);
   const fixedElement_3 = useRef(null);
   const imageElement = useRef(null);
+
+  const ctaElement = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -35,10 +38,25 @@ export const Works = ({ works }) => {
         },
       });
     });
+
+    const cta = ctaElement.current;    
+    gsap.timeline().from(cta, {
+      scaleX: 0,                  
+      ease: "ease-out",
+      scrollTrigger: {
+        trigger: cta,
+        start: "top 80%",
+        end: "top 50%",
+        scrub: true,        
+      },
+    })    
   }, []);
 
   return (
     <div className={style.wrapper}>
+      <div className="translate-y-12">
+        <Subtitle title="My Works"></Subtitle>
+      </div>
       <div ref={fixedElement} id="content_1" className={style.content}>
         <div className={style.title_container}>
           <h3 className={style.title}>Visions Lunettes</h3>
@@ -137,9 +155,13 @@ export const Works = ({ works }) => {
         </div>
       </div>
 
-      <div className={style.button_container}>
-        <span className={style.button_title}>You can see<br></br>all works below.</span>
-        <p className={style.button_text}>以下のボタンをクリックすると、Worksの一覧ページへ遷移します。</p>
+      <div ref={ctaElement} className={style.button_container}>
+        <span className={style.button_title}>
+          You can see<br></br>all works below.
+        </span>
+        <p className={style.button_text}>
+          以下のボタンをクリックすると、Worksの一覧ページへ遷移します。
+        </p>
         <Link className={style.button} href={"/work"}>
           view all works
         </Link>
