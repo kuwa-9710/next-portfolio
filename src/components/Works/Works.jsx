@@ -19,9 +19,9 @@ export const Works = ({ works }) => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const fixedElements = [
-      { element: fixedElement.current, end: "+=400" },
-      { element: fixedElement_2.current, end: "+=400" },
-      { element: fixedElement_3.current, end: "+=400" },
+      { element: fixedElement.current, end: "+=200" },
+      { element: fixedElement_2.current, end: "+=200" },
+      { element: fixedElement_3.current, end: "+=200" },
     ];
 
     fixedElements.forEach(({ element, end }, index) => {
