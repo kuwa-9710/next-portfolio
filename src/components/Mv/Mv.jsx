@@ -1,4 +1,4 @@
-import { Maintitle } from "../Maintitle";
+import { Maintitle } from "../Maintitle/Maintitle";
 import { ThreeCanvas } from "../ThreeCanvas";
 import style from "./Mv.module.scss";
 
