@@ -1,5 +1,5 @@
 .header {
-  height: 80px;
+  height: 70px;
   width: 100%;
   position: fixed;
   z-index: 99999;
@@ -10,12 +10,13 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .container {
   height: 100%;
   width: 100%;
-  max-width: 72rem;
+  max-width: 1200px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +27,7 @@
 }
 
 .button {
-  display: block;
+  display: none;
   position: absolute;
   z-index: 9999;
   top: 50%;
@@ -85,20 +86,148 @@
 
 .logo {
   display: flex;
-  align-items: center;
+}
+
+.logo_image {
+  height: 40px;
+  width: auto;
 }
 
 .logo_text {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
+  gap: 0.5rem;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+  margin-left: auto;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.nav_title {
+  display: none;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav_item {
+  & a {
+    font-size: 0.9rem;
+    font-weight: 300;
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    &:hover {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+  }
+}
+
+.contact {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 53, 191, 1) 0%,
+    rgba(171, 29, 253, 1) 50%,
+    rgba(45, 49, 254, 1) 100%
+  );
+  height: 100%;
+  width: 150px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* =================================================
  800px
 =================================================== */
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
   .button {
+    display: inline-block;
+  }
+
+  .logo_image {
+    height: 30px;
+  }
+
+  .logo_text {
+    & span {
+      font-size: 1.3rem;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #1e293b;
+    transform: translateX(150%);
+    transition: transform 0.7s ease;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+
+  .nav_list {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: 4rem 1rem 0 1rem;
+    gap: 0;
+  }
+
+  .nav_title {
+    display: block;
+  }
+
+  .nav_item {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    margin-top: 1rem;
+
+    & a {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 20px;
+      right: -2px;
+      bottom: 7px;
+      transform: rotate(45deg);
+      background-color: #fff;
+    }
+  }
+
+  .contact {
     display: none;
   }
 }
