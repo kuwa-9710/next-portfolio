@@ -2,7 +2,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
 import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
-import { Maintitle } from "@/components/Maintitle";
+import { Maintitle } from "@/components/Maintitle/Maintitle";
 import { Skills } from "@/components/Skills/Skills";
 import { Works } from "@/components/Works/Works";
 import { createClient } from "microcms-js-sdk";

@@ -2,9 +2,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import style from "./Header.module.scss";
 import classNames from "classnames";
+import Image from "next/image";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
@@ -32,12 +32,23 @@ export function Header() {
     [style.active]: isActive,
   });
 
+  const navClass = classNames(style.nav, {
+    [style.active]: isActive,
+  });
+
   return (
     <header className={headerClass}>
       <div className={style.container}>
         <div className={style.logo}>
           <Link href="/" className={style.logo_text}>
-            AboutMe
+            <Image
+              className={style.logo_image}
+              src={"/next_logo.png"}
+              height={100}
+              width={100}
+              alt="ロゴ"
+            />
+            <span>AboutMe</span>
           </Link>
         </div>
 
@@ -47,36 +58,20 @@ export function Header() {
           <span></span>
         </button>
 
-        <nav
-          className={`fixed top-0 right-0 h-screen w-[300px] bg-slate-800 z-40 transition-transform duration-700 transform ${
-            isActive ? "translate-x-0" : "translate-x-[150%]"
-          } lg:relative lg:flex lg:items-center lg:w-auto lg:h-auto lg:translate-x-0 lg:bg-transparent`}
-          onClick={() => setIsOpen(false)}
-        >
-          <ul className="flex flex-col ml-4 mt-20 lg:flex-row list-none lg:ml-auto lg:mt-0">
-            <li className="nav-item">
-              <Link
-                href="/"
-                className="px-3 py-2 flex items-center text-white font-medium hover:text-sky-400 hover:font-bold"
-              >
-                Home
-              </Link>
+        <nav className={navClass} onClick={() => setIsActive(!isActive)}>
+          <ul className={style.nav_list}>
+            <li className={style.nav_title}>menu</li>
+            <li className={style.nav_item}>
+              <Link href="/">Home</Link>
             </li>
-            <li className="nav-item">
-              <Link
-                href="/about"
-                className="px-3 py-2 flex items-center text-white font-medium hover:text-sky-400 hover:font-bold"
-              >
-                About
-              </Link>
+            <li className={style.nav_item}>
+              <Link href="/work">Works</Link>
             </li>
-            <li className="nav-item">
-              <Link
-                href="/contact"
-                className="px-3 py-2 flex items-center text-white font-medium hover:text-sky-400 hover:font-bold"
-              >
-                Contact
-              </Link>
+            <li className={style.nav_item}>
+              <Link href="/about">About</Link>
+            </li>
+            <li className={style.nav_item}>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>

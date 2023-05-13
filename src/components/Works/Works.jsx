@@ -19,18 +19,18 @@ export const Works = ({ works }) => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const fixedElements = [
-      { element: fixedElement.current, end: "+=200" },
-      { element: fixedElement_2.current, end: "+=200" },
-      { element: fixedElement_3.current, end: "+=200" },
+      { element: fixedElement.current, end: "+=400" },
+      { element: fixedElement_2.current, end: "+=400" },
+      { element: fixedElement_3.current, end: "+=400" },
     ];
 
     fixedElements.forEach(({ element, end }, index) => {
       gsap.from(element, {
-        y: "200",
+        y: "400",
         opacity: 0,
         scrollTrigger: {
           trigger: element,
-          start: "top 60%",
+          start: "top 80%",
           end: end,
           scrub: true,
           pin: "top",
@@ -63,8 +63,8 @@ export const Works = ({ works }) => {
             <h3 className={style.title}>Visions Lunettes</h3>
             <p className={style.sub}>
               Demo web site. I made this design and codes.
-            </p>
-            <span className={style.link}>Visit site</span>
+            </p>            
+            <Link href={"/"} className={style.link}>Visit site</Link>
           </div>
           <div className={style.image_container}>
             <Image
