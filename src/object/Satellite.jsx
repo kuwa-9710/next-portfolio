@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
 
 export const Satellite = () => {
   const satelliteRef = useRef();
@@ -12,7 +13,10 @@ export const Satellite = () => {
     satelliteRef.current.position.y = radius * Math.cos(radian);
     satelliteRef.current.position.z = radius * Math.sin(radian);
     radian += 0.01;    
+    satelliteRef.current.rotation.y += 0.01;
   });
+
+  const texture = useLoader(TextureLoader, "/moon.jpg")
 
   return (
     <>
@@ -23,7 +27,7 @@ export const Satellite = () => {
         ref={satelliteRef}
       >
         <sphereGeometry args={[10, 64, 32]} />
-        <meshStandardMaterial wireframe={false} />
+        <meshStandardMaterial map={texture} wireframe={false} />
       </mesh>
     </>
   );

@@ -1,7 +1,6 @@
 import useSpline from "@splinetool/r3f-spline";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Satellite } from "./Satellite";
 
 export function Earth({ ...props }) {
   const { nodes, materials } = useSpline(
@@ -15,7 +14,7 @@ export function Earth({ ...props }) {
   });
 
   return (
-    <>      
+    <>
       <mesh
         name="Earth"
         geometry={nodes.Sphere.geometry}
