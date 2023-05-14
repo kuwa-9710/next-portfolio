@@ -3,6 +3,7 @@ import { Satellite } from "@/object/Satellite";
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Camera } from "@/object/Camera";
+import * as THREE from 'three';
 
 export function ThreeCanvas(props) {
   return (
@@ -25,7 +26,7 @@ export function ThreeCanvas(props) {
         <directionalLight
           name="Directional Light"
           castShadow
-          intensity={1}
+          intensity={1.2}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
           shadow-camera-near={-10000}
@@ -34,8 +35,10 @@ export function ThreeCanvas(props) {
           shadow-camera-right={1250}
           shadow-camera-top={1250}
           shadow-camera-bottom={-1250}
-          position={[-50, 40, 50]}
+          position={[-50, 20, 20]}
+          color={new THREE.Color(0xe0f2fe)} 
         />
+        <ambientLight intensity={0.1} color={0xe0f2fe} />Ï
       </Canvas>
     </>
   );
