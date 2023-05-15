@@ -19,14 +19,14 @@ export const Works = ({ works }) => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const fixedElements = [
-      { element: fixedElement.current, end: "+=400" },
-      { element: fixedElement_2.current, end: "+=400" },
-      { element: fixedElement_3.current, end: "+=400" },
+      { element: fixedElement.current, end: "+=200" },
+      { element: fixedElement_2.current, end: "+=200" },
+      { element: fixedElement_3.current, end: "+=200" },
     ];
 
     fixedElements.forEach(({ element, end }, index) => {
       gsap.from(element, {
-        y: "400",
+        y: "200",
         opacity: 0,
         scrollTrigger: {
           trigger: element,
@@ -41,12 +41,13 @@ export const Works = ({ works }) => {
 
     const cta = ctaElement.current;
     gsap.timeline().from(cta, {
-      scaleX: 0,
+      y: "200",
+      opacity: 0,
       ease: "ease-out",
       scrollTrigger: {
         trigger: cta,
         start: "top 80%",
-        end: "top 50%",
+        end: "top 50%",        
         scrub: true,
       },
     });

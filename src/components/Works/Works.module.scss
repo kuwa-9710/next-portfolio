@@ -4,6 +4,9 @@
 
 .content {
   height: 80vh;
+  max-width: 1200px;
+  padding: 0 1.25rem;
+  margin: 0 auto;
   text-align: center;
   display: flex;
 }
@@ -13,24 +16,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;  
   width: 50%;
 }
 
 .title {
+  width: 100%;
   font-size: 3rem;
   font-weight: bold;
   color: #fff;
 }
 
 .sub {
+  width: 100%;
   font-size: 1rem;
-  font-weight: bold;
-  color: #475569;
-  padding: 0 1.5rem;
+  font-weight: 400;
+  color: #475569;  
 }
 
 .link {
+  display: block;
+  width: 100%;
   color: #0ea5e9;
   text-decoration: underline;
   line-height: 1.5em;
@@ -75,13 +81,7 @@
 
 .button_container {
   margin: 0 auto;
-  padding: 3rem 0;
-  background: linear-gradient(
-    135deg,
-    rgba(235, 53, 191, 1) 0%,
-    rgba(171, 29, 253, 1) 50%,
-    rgba(45, 49, 254, 1) 100%
-  );
+  padding: 3rem 0;  
   background-size: cover;
   max-width: 1080px;
   border-radius: 10px;
@@ -153,15 +153,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
 
   .title {
     font-size: 2.25rem;
   }
 
+  .sub {
+    padding: 0 1.5rem;
+  }
+
   .image_container {
     width: 100%;
+    max-width: 600px;
     height: 60vh;
+    margin: 0 auto;
   }
 
   .image {
