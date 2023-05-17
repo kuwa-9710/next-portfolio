@@ -65,7 +65,7 @@ export const Works = ({ works }) => {
             <p className={style.sub}>
               Demo web site. I made this design and codes.
             </p>            
-            <Link href={"/"} className={style.link}>Visit site</Link>
+            <Link href={"/work/c85vdl12p"} className={style.link}>Visit site</Link>
           </div>
           <div className={style.image_container}>
             <Image
@@ -98,7 +98,7 @@ export const Works = ({ works }) => {
             <p className={style.sub}>
               架空のECサイト。FigmaでデザインしたオリジナルWebサイト
             </p>
-            <span className={style.link}>Visit site</span>
+            <Link href={'/work/p3qhtx952p'} className={style.link}>Visit site</Link>
           </div>
           <div className={style.image_container}>
             <Image
@@ -133,7 +133,7 @@ export const Works = ({ works }) => {
               <br />
               Laravel 9を使用して作成しました。
             </p>
-            <span className={style.link}>Visit site</span>
+            <Link href={'/work/oe6rnsyne-uv'} className={style.link}>Visit site</Link>
           </div>
           <div className={style.image_container}>
             <Image

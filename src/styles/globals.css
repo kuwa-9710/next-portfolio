@@ -106,7 +106,7 @@ img,
 embed,
 object,
 iframe {
-  vertical-align: bottom;
+  vertical-align: bottom;  
 }
 button,
 input,
@@ -207,6 +207,10 @@ th {
 }
 
 #__next {
+  width: 100%;
+}
+
+iframe {
   width: 100%;
 }
 
