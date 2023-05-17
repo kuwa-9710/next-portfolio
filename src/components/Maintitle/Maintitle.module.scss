@@ -23,6 +23,12 @@
   margin-top: 1rem;
 }
 
+.gradient {
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .text {
   color: #64748b;
   margin-top: 1rem;
