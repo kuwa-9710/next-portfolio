@@ -10,7 +10,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > window.innerHeight;
+      const isScrolled = window.scrollY > 70;
       if (isScrolled) {
         setIsFixed(isScrolled);
       } else {
