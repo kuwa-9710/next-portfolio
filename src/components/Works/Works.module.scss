@@ -3,7 +3,7 @@
 }
 
 .content {
-  height: 80vh;
+  height: 90vh;
   max-width: 1200px;
   padding: 0 1.25rem;
   margin: 0 auto;
@@ -82,9 +82,9 @@
 
 .button_container {
   margin: 0 auto;
-  padding: 3rem 0;  
+  padding: 6rem 0;  
   background-size: cover;
-  max-width: 1080px;
+  max-width: 1200px;
   border-radius: 10px;
 }
 
@@ -92,7 +92,7 @@
   display: block;
   color: #fff;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
 }
 
@@ -101,7 +101,7 @@
   text-align: center;
   padding: 0 4rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .button {
@@ -189,6 +189,10 @@
       top: 60%;
       transform: translateX(-50%) translateY(-50%);
     }
+  }
+
+  .button_container {
+    padding: 3rem 0;
   }
 
   .button_title {
