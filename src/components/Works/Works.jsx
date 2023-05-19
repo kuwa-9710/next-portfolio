@@ -64,6 +64,7 @@ export const Works = ({ works }) => {
             <h3 className={style.title}>Visions Lunettes</h3>
             <p className={style.sub}>
               Demo web site. I made this design and codes.
+              <span>Tools & Codes: HTML, CSS, javascript, scss, Figma, Photoshop.</span>
             </p>            
             <Link href={"/work/c85vdl12p"} className={style.link}>Visit site</Link>
           </div>
@@ -96,9 +97,10 @@ export const Works = ({ works }) => {
           <div className={style.title_container}>
             <h3 className={style.title}>TOKYO PROTEIN</h3>
             <p className={style.sub}>
-              架空のECサイト。FigmaでデザインしたオリジナルWebサイト
+              Demo EC web site. I made this design.
+              <span>Tools & Codes: Figma, Photoshop</span>
             </p>
-            <Link href={'/work/p3qhtx952p'} className={style.link}>Visit site</Link>
+            <Link href={'/work/p3qhtx952p'} className={style.link}>View Detail</Link>
           </div>
           <div className={style.image_container}>
             <Image
@@ -129,9 +131,8 @@ export const Works = ({ works }) => {
           <div className={style.title_container}>
             <h3 className={style.title}>Simple Note</h3>
             <p className={style.sub}>
-              オリジナルのWebアプリケーションです。
-              <br />
-              Laravel 9を使用して作成しました。
+              This is original web application. I made this design and code by Laravel.<br/>
+              Tools & Codes: HTML, CSS, PHP, javascript, Laravel, MySQL, Node.js.
             </p>
             <Link href={'/work/oe6rnsyne-uv'} className={style.link}>Visit site</Link>
           </div>
