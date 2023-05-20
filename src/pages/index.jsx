@@ -9,11 +9,15 @@ import { createClient } from "microcms-js-sdk";
 import { AboutMe } from "@/components/About/About";
 import { HeaderTag } from "@/components/HeadTag";
 import { Mv } from "@/components/Mv/Mv";
+import { Contents_3D } from "@/components/3dContents/3dContents";
+import { Load } from "@/components/Load/Load";
 
 export default function Home({ works }) {
   return (
     <div className="scrollbar scrollbar-thumb-sky-400 scrollbar-track-gray-100">
       <HeaderTag page="Top" />
+
+      <Load />
 
       <Header />
 
@@ -21,6 +25,7 @@ export default function Home({ works }) {
         <Mv />
         <Skills />
         <Works works={works} />
+        <Contents_3D />
         <AboutMe />
       </Main>
 

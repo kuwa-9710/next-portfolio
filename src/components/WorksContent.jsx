@@ -8,7 +8,7 @@ export function WorksContent({ works }) {
 
   return (
     <>
-      <ul className="mt-16 flex flex-row gap-8 flex-wrap max-w-4xl mx-auto justify-center">
+      <ul className="my-16 flex flex-row gap-8 flex-wrap max-w-4xl mx-auto justify-center">
         {works.map((work) => (
           <li className="w-full sm:w-80" key={work.id}>
             <Link className="text-white" href={`/work/${work.id}`}>

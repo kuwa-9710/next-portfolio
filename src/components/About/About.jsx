@@ -20,6 +20,9 @@ export const AboutMe = (props) => {
         <FontAwesomeIcon className="w-3" icon={faLocationDot} />
         in Sendai.
       </span>
+      <p className={style.text}>
+        仙台生まれの24歳。大学卒業後、本業はエンジニアではないが、フロントエンドを中心に学習中。Next.jsやThree.jsに力を入れている。好きな漫画はワンピース、最近はバウンティラッシュにハマっている。
+      </p>
     </div>
   );
 };
