@@ -2,6 +2,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
 import { HeaderTag } from "@/components/HeadTag";
 import { Main } from "@/components/Main";
+import style from "./about.module.scss";
+import { AboutMe } from "@/components/About/About";
+import { BackToHome } from "@/components/BackToHome/BackToHome";
 
 export default function About() {
   return (
@@ -11,7 +14,10 @@ export default function About() {
       <Header />
 
       <Main>
-        <h1 className="mt-4 text-3xl text-white text-center">About Page</h1>
+        <div className={style.container}>
+          <AboutMe />
+          <BackToHome />
+        </div>
       </Main>
 
       <Footer />
