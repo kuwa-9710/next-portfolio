@@ -60,18 +60,18 @@ export function Header() {
 
         <nav className={navClass} onClick={() => setIsActive(!isActive)}>
           <ul className={style.nav_list}>
-            <li className={style.nav_title}>menu</li>
+            <li className={style.nav_title}>MENU</li>
             <li className={style.nav_item}>
-              <Link href="/">Home</Link>
+              <Link href="/">HOME</Link>
             </li>
             <li className={style.nav_item}>
-              <Link href="/work">Works</Link>
+              <Link href="/work">WORKS</Link>
             </li>
             <li className={style.nav_item}>
-              <Link href="/about">About</Link>
+              <Link href="/about">ABOUT</Link>
             </li>
             <li className={style.nav_item}>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">CONTACT</Link>
             </li>
           </ul>
         </nav>
