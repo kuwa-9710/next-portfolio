@@ -29,19 +29,19 @@ export const Subtitle = (props) => {
         {
           autoAlpha: 0,
           y: -50,
-          rotateZ: -50,
+          rotation: -50,
         },
         {
           duration: 0.25,
           autoAlpha: 1,
           y: 0,
-          rotateZ: 0,
+          rotation: 0,
           stagger: {
             each: 0.05,
           },
           scrollTrigger: {
             trigger: target,
-            start: "top 80%",
+            start: "bottom bottom",
           },
         }
       );

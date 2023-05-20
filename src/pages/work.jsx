@@ -4,17 +4,19 @@ import { HeaderTag } from "@/components/HeadTag";
 import { Main } from "@/components/Main";
 import { WorksContent } from "@/components/WorksContent";
 import { client } from "../../libs/client";
+import { BackToHome } from "@/components/BackToHome/BackToHome";
 
 export default function Work({ work }) {
   return (
     <>
-      <HeaderTag page=" 制作実績" />
+      <HeaderTag page="制作実績" />
       <Header />
 
       <Main>
-        <div className="pt-16 px-4">
-          <h1 className="pt-4 text-3xl text-white text-center">Work Page</h1>
+        <div className="py-16 px-4 bg-[#020617]">
+          <h1 className="pt-4 text-3xl text-white text-center">WORKS PAGE</h1>
           <WorksContent works={work} />
+          <BackToHome />
         </div>
       </Main>
 

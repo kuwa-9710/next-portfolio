@@ -134,7 +134,7 @@ export const Works = ({ works }) => {
               This is original web application. I made this design and code by Laravel.<br/>
               Tools & Codes: HTML, CSS, PHP, javascript, Laravel, MySQL, Node.js.
             </p>
-            <Link href={'/work/oe6rnsyne-uv'} className={style.link}>Visit site</Link>
+            <Link href={'/work/oe6rnsyne-uv'} className={style.link}>View Detail</Link>
           </div>
           <div className={style.image_container}>
             <Image
@@ -160,6 +160,7 @@ export const Works = ({ works }) => {
             />
           </div>
         </div>
+
         <div ref={ctaElement} className={style.button_container}>
           <span className={style.button_title}>
             You can see<br></br>all works below.
@@ -171,6 +172,7 @@ export const Works = ({ works }) => {
             view all works
           </Link>
         </div>
+        
       </div>
     </>
   );
