@@ -47,7 +47,7 @@ export const Works = ({ works }) => {
       scrollTrigger: {
         trigger: cta,
         start: "top 80%",
-        end: "top 50%",        
+        end: "top 50%",
         scrub: true,
       },
     });
@@ -64,9 +64,17 @@ export const Works = ({ works }) => {
             <h3 className={style.title}>Visions Lunettes</h3>
             <p className={style.sub}>
               Demo web site. I made this design and codes.
-              <span>Tools & Codes: HTML, CSS, javascript, scss, Figma, Photoshop.</span>
-            </p>            
-            <Link href={"/work/c85vdl12p"} className={style.link}>Visit site</Link>
+              <span>
+                Tools & Codes: HTML, CSS, javascript, scss, Figma, Photoshop.
+              </span>
+            </p>
+            <a
+              href="https://kuwa-9710.github.io/visions_lunettes/"
+              className={style.link}
+              target="blank"
+            >
+              Visit site
+            </a>
           </div>
           <div className={style.image_container}>
             <Image
@@ -100,7 +108,9 @@ export const Works = ({ works }) => {
               Demo EC web site. I made this design.
               <span>Tools & Codes: Figma, Photoshop</span>
             </p>
-            <Link href={'/work/p3qhtx952p'} className={style.link}>View Detail</Link>
+            <Link href={"/work/p3qhtx952p"} className={style.link}>
+              View Detail
+            </Link>
           </div>
           <div className={style.image_container}>
             <Image
@@ -131,10 +141,15 @@ export const Works = ({ works }) => {
           <div className={style.title_container}>
             <h3 className={style.title}>Simple Note</h3>
             <p className={style.sub}>
-              This is original web application. I made this design and code by Laravel.<br/>
-              Tools & Codes: HTML, CSS, PHP, javascript, Laravel, MySQL, Node.js.
+              This is original web application. I made this design and code by
+              Laravel.
+              <br />
+              Tools & Codes: HTML, CSS, PHP, javascript, Laravel, MySQL,
+              Node.js.
             </p>
-            <Link href={'/work/oe6rnsyne-uv'} className={style.link}>View Detail</Link>
+            <Link href={"/work/oe6rnsyne-uv"} className={style.link}>
+              View Detail
+            </Link>
           </div>
           <div className={style.image_container}>
             <Image
@@ -172,7 +187,6 @@ export const Works = ({ works }) => {
             view all works
           </Link>
         </div>
-        
       </div>
     </>
   );
