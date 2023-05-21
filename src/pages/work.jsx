@@ -14,7 +14,7 @@ export default function Work({ work }) {
 
       <Main>
         <div className="py-16 px-4 bg-[#020617]">
-          <h1 className="pt-4 text-3xl text-white text-center">WORKS PAGE</h1>
+          <h1 className="pt-16 text-3xl text-white text-center">WORKS PAGE</h1>
           <WorksContent works={work} />
           <BackToHome />
         </div>
