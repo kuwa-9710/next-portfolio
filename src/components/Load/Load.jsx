@@ -32,10 +32,9 @@ export const Load = () => {
         {
           duration: 0.5,
           filter: "blur(5px)",
-          autoAlpha: 0,
-          scale: 1.1,
+          autoAlpha: 0,          
         },
-        "+=.6"
+        "+=.7"
       )
       .to(
         line,
