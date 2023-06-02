@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/components/Subtitle/Subtitle.module.scss","Subtitle.module.css"],"names":[],"mappings":"AAAA;EACE,cAAA;EACA,mBAAA;EACA,kBAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;ACCF;;ADEA;;qDAAA;AAGA;EACE;IACE,iBAAA;IACA,iBAAA;ECCF;AACF","file":"Subtitle.module.css"}
