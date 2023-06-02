@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #1e293b;
+  color: #fff;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+.button:active {
+  background-color: #0ea5e9;
+}
+.button:hover {
+  background-color: #38bdf8;
+}/*# sourceMappingURL=BackToHome.module.css.map */
