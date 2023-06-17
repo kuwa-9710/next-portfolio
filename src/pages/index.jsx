@@ -1,8 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header/Header";
-import { ThreeCanvas } from "@/components/ThreeCanvas";
 import { Main } from "@/components/Main";
-import { Maintitle } from "@/components/Maintitle/Maintitle";
 import { Skills } from "@/components/Skills/Skills";
 import { Works } from "@/components/Works/Works";
 import { createClient } from "microcms-js-sdk";
@@ -12,7 +10,7 @@ import { Mv } from "@/components/Mv/Mv";
 import { Contents_3D } from "@/components/3dContents/3dContents";
 import { Load } from "@/components/Load/Load";
 
-export default function Home({ works }) {
+export default function Home({ works, shaders }) {
   return (
     <div className="scrollbar scrollbar-thumb-sky-400 scrollbar-track-gray-100">
       <HeaderTag page="Top" />
@@ -25,7 +23,7 @@ export default function Home({ works }) {
         <Mv />
         <Skills />
         <Works works={works} />
-        <Contents_3D />
+        <Contents_3D shaders={shaders} />
         <AboutMe />
       </Main>
 
@@ -40,13 +38,18 @@ export async function getStaticProps() {
     apiKey: process.env.NEXT_PUBLIC_MICROCMS_API_KEY,
   });
 
-  const data = await client.get({
+  const worksData = await client.get({
     endpoint: "works",
+  });
+
+  const shadersData = await client.get({
+    endpoint: "shader",
   });
 
   return {
     props: {
-      works: data.contents,
+      works: worksData.contents,
+      shaders: shadersData.contents,
     },
   };
 }
