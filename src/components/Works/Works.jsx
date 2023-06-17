@@ -8,47 +8,56 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { Subtitle } from "../Subtitle/Subtitle";
 
 export const Works = ({ works }) => {
-  const fixedElement = useRef(null);
-  const fixedElement_2 = useRef(null);
-  const fixedElement_3 = useRef(null);
-  const imageElement = useRef(null);
-
-  const ctaElement = useRef(null);
+  const element_1_Ref = useRef(null);
+  const element_2_Ref = useRef(null);
+  const element_3_Ref = useRef(null);
+  const cta = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    const fixedElements = [
-      { element: fixedElement.current, end: "+=200" },
-      { element: fixedElement_2.current, end: "+=200" },
-      { element: fixedElement_3.current, end: "+=200" },
-    ];
+    const element_1 = element_1_Ref.current;
+    const element_2 = element_2_Ref.current;
+    const element_3 = element_3_Ref.current;
+    const ctaElement = cta.current;
 
-    fixedElements.forEach(({ element, end }, index) => {
-      gsap.from(element, {
-        y: "200",
-        opacity: 0,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          end: end,
-          scrub: true,
-          pin: "top",
-          pinSpacing: false,
-        },
-      });
+    gsap.from(element_1, {
+      autoAlpha: 0,
+      y: 100,
+      scrollTrigger: {
+        trigger: element_1,
+        start: "center bottom",
+        end: "center center",
+      },
     });
 
-    const cta = ctaElement.current;
-    gsap.timeline().from(cta, {
-      y: "200",
-      opacity: 0,
-      ease: "ease-out",
+    gsap.from(element_2, {
+      autoAlpha: 0,
+      y: 100,
       scrollTrigger: {
-        trigger: cta,
-        start: "top 80%",
-        end: "top 50%",
-        scrub: true,
+        trigger: element_2,
+        start: "center bottom",
+        end: "center center",
+      },
+    });
+
+    gsap.from(element_3, {
+      autoAlpha: 0,
+      y: 100,
+      scrollTrigger: {
+        trigger: element_3,
+        start: "center bottom",
+        end: "center center",
+      },
+    });
+
+    gsap.from(ctaElement, {
+      autoAlpha: 0,
+      y: 100,
+      scrollTrigger: {
+        trigger: ctaElement,
+        start: "center bottom",
+        end: "center center",
       },
     });
   }, []);
@@ -59,7 +68,7 @@ export const Works = ({ works }) => {
         <div className="translate-y-12">
           <Subtitle title="My Works"></Subtitle>
         </div>
-        <div ref={fixedElement} id="content_1" className={style.content}>
+        <div ref={element_1_Ref} id="content_1" className={style.content}>
           <div className={style.title_container}>
             <h3 className={style.title}>Visions Lunettes</h3>
             <p className={style.sub}>
@@ -101,7 +110,7 @@ export const Works = ({ works }) => {
           </div>
         </div>
 
-        <div ref={fixedElement_2} id="content_2" className={style.content}>
+        <div ref={element_2_Ref} id="content_2" className={style.content}>
           <div className={style.title_container}>
             <h3 className={style.title}>TOKYO PROTEIN</h3>
             <p className={style.sub}>
@@ -137,7 +146,7 @@ export const Works = ({ works }) => {
           </div>
         </div>
 
-        <div ref={fixedElement_3} id="content_3" className={style.content}>
+        <div ref={element_3_Ref} id="content_3" className={style.content}>
           <div className={style.title_container}>
             <h3 className={style.title}>Simple Note</h3>
             <p className={style.sub}>
@@ -176,7 +185,7 @@ export const Works = ({ works }) => {
           </div>
         </div>
 
-        <div ref={ctaElement} className={style.button_container}>
+        <div ref={cta} className={style.button_container}>
           <span className={style.button_title}>
             You can see<br></br>all works below.
           </span>
