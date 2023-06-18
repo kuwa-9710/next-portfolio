@@ -9,6 +9,7 @@ import { HeaderTag } from "@/components/HeadTag";
 import { Mv } from "@/components/Mv/Mv";
 import { Contents_3D } from "@/components/3dContents/3dContents";
 import { Load } from "@/components/Load/Load";
+import { ContentsWrapper } from "@/components/ContentsWrapper/ContentsWrapper";
 
 export default function Home({ works, shaders }) {
   return (
@@ -21,9 +22,11 @@ export default function Home({ works, shaders }) {
 
       <Main>
         <Mv />
-        <Skills />
-        <Works works={works} />
-        <Contents_3D shaders={shaders} />
+        <ContentsWrapper>
+          <Skills />
+          <Works works={works} />
+          <Contents_3D shaders={shaders} />
+        </ContentsWrapper>
         <AboutMe />
       </Main>
 
