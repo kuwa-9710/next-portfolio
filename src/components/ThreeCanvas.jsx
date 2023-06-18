@@ -38,7 +38,7 @@ export function ThreeCanvas(props) {
           position={[-50, 20, 20]}
           color={new THREE.Color(0xe0f2fe)} 
         />
-        <ambientLight intensity={0.1} color={0xe0f2fe} />Ï
+        <ambientLight intensity={0.1} color={0xe0f2fe} />
       </Canvas>
     </>
   );
