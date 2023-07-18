@@ -1,4 +1,19 @@
-.article {
+.article p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.article p a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.article p a:active {
+  color: #ff0000;
+}
+
+.article p a:visited {
+  color: #800080;
 }
 
 .article h2 {
